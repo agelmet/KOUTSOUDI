@@ -40,12 +40,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;1,300&family=Manrope:wght@400;700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;1,300&family=Manrope:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;1,300&family=Manrope:wght@400;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;1,300&family=Manrope:wght@400;700&display=swap"></noscript>
 <link rel="preload" as="image" href="assets/christina-koutsoudi-psychologos-thessaloniki.webp" fetchpriority="high">
 <style>
 :root{
   --paper:#F3EEE9; --surface:#E9E1DB; --surface-2:#DFD5CD;
-  --ink:#2A2838; --muted:#6B6878; --line:rgba(42,40,56,.12);
+  --ink:#2A2838; --muted:#585566; --line:rgba(42,40,56,.12);
   --accent:#7C78B4; --accent-ink:#5A569A; --accent-soft:#C9C6E3;
   --deep:#332F5E; --deep-2:#26234A; --on-deep:#EFEBFF;
   --serif:"Noto Serif Display",Georgia,"Times New Roman",serif;
@@ -91,7 +92,7 @@ html.js .sr.in{opacity:1;transform:none}
 html.js .sr.d1{transition-delay:.06s}html.js .sr.d2{transition-delay:.12s}html.js .sr.d3{transition-delay:.18s}html.js .sr.d4{transition-delay:.24s}
 
 /* ===== NAV ===== */
-.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:18px 0;transition:background .4s,box-shadow .4s,padding .4s}
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:18px 0;transition:background .4s,box-shadow .4s}
 .nav.scrolled{background:rgba(243,238,233,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);padding:10px 0}
 .nav .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
 .nav ul{display:flex;gap:34px;font-size:14px;font-weight:700;letter-spacing:.02em;white-space:nowrap}
@@ -222,7 +223,7 @@ section{padding:112px 0}
 .finder{background:var(--deep);color:var(--on-deep);position:relative;overflow:hidden}
 .finder .head h2{color:#fff}
 .finder .eyebrow{color:var(--accent-soft)}.finder .eyebrow::before{background:var(--accent-soft)}
-.finder .lead{color:rgba(239,235,255,.7)}
+.finder .lead{color:rgba(239,235,255,.78)}
 .finder .glow{position:absolute;width:60vw;height:60vw;max-width:900px;max-height:900px;border-radius:50%;background:radial-gradient(closest-side,rgba(124,120,180,.35),transparent 70%);right:-20vw;top:-20vw;pointer-events:none}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
 .chip{padding:12px 20px;border-radius:999px;border:1.5px solid rgba(239,235,255,.28);font-weight:700;font-size:14px;transition:background .3s,border-color .3s,transform .3s var(--ease);color:var(--on-deep)}
@@ -284,7 +285,7 @@ section{padding:112px 0}
 /* contact — full width band */
 .contact{background:var(--deep);color:var(--on-deep);position:relative;overflow:hidden}
 .contact .head h2{color:#fff}.contact .eyebrow{color:var(--accent-soft)}.contact .eyebrow::before{background:var(--accent-soft)}
-.contact .lead{color:rgba(239,235,255,.7)}
+.contact .lead{color:rgba(239,235,255,.78)}
 .contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
 .info{display:grid;gap:26px}
 .info .item{display:grid;grid-template-columns:44px 1fr;gap:16px}
@@ -297,13 +298,13 @@ section{padding:112px 0}
 .map button{position:absolute;inset:0;display:grid;place-content:center;gap:12px;text-align:center;color:#fff}
 .map button b{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;background:var(--on-deep);color:var(--deep);font-size:14px;justify-self:center}
 .map button b span{display:inline;color:inherit;font-size:14px;opacity:1}
-.map button span{font-size:13px;opacity:.75}
+.map button span{font-size:13px;opacity:.9}
 .map iframe{width:100%;height:100%;border:0;display:block}
 .map .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(239,235,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(239,235,255,.07) 1px,transparent 1px);background-size:36px 36px}
 .map .pin{position:absolute;left:62%;top:28%;width:14px;height:14px;border-radius:50%;background:var(--accent-soft);box-shadow:0 0 0 10px rgba(201,198,227,.18)}
 .form{background:rgba(239,235,255,.06);border:1px solid rgba(239,235,255,.14);border-radius:24px;padding:32px}
 .form h3{color:#fff;margin-bottom:8px}
-.form .note{font-size:14px;color:rgba(239,235,255,.7);margin-bottom:22px}
+.form .note{font-size:14px;color:rgba(239,235,255,.78);margin-bottom:22px}
 .field{display:grid;gap:8px;margin-bottom:16px}
 .field label{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent-soft)}
 .field input,.field textarea,.field select{width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(239,235,255,.2);background:rgba(38,35,74,.6);color:#fff;font:inherit;font-size:16px}
@@ -312,12 +313,12 @@ section{padding:112px 0}
 .form .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .form .ok{display:none;padding:18px;border-radius:14px;background:rgba(239,235,255,.1);margin-top:12px}
 .form.sent form{display:none}.form.sent .ok{display:block}
-.form .alt{margin-top:18px;font-size:14px;color:rgba(239,235,255,.7)}
+.form .alt{margin-top:18px;font-size:14px;color:rgba(239,235,255,.78)}
 .form .alt a{color:#fff;border-bottom:1px solid var(--accent-soft)}
 @media (max-width:980px){.contact .grid{grid-template-columns:1fr;gap:40px}.form .row2{grid-template-columns:1fr}}
 
 /* footer */
-footer{background:var(--deep-2);color:rgba(239,235,255,.75);padding:56px 0 110px;font-size:14px}
+footer{background:var(--deep-2);color:rgba(239,235,255,.8);padding:56px 0 110px;font-size:14px}
 footer .top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(239,235,255,.12)}
 footer .brand .wm b,footer .brand .wm small{color:#fff}
 footer .brand .wm small{color:var(--accent-soft)}
@@ -556,7 +557,7 @@ footer .bottom a{color:#fff;border-bottom:1px solid rgba(239,235,255,.3)}
       <div><span class="eyebrow sr" data-en="What is on your mind?">Τι σας απασχολεί;</span><h2 class="sr d1" data-en-html="Choose what feels closest,<br>and see how we would <em class='i' style='color:#C9C6E3'>begin</em>.">Επιλέξτε ό,τι σας μοιάζει πιο κοντά,<br>και δείτε πώς θα <em class="i" style="color:#C9C6E3">ξεκινούσαμε</em>.</h2></div>
       <p class="lead sr d2" data-en="This is not a diagnosis — just a first, honest picture of what the first sessions would look like for you.">Δεν πρόκειται για διάγνωση — μόνο μια πρώτη, ειλικρινής εικόνα του πώς θα ήταν οι πρώτες συνεδρίες για εσάς.</p>
     </div>
-    <div class="chips sr" id="chips" role="tablist" aria-label="Θέματα"></div>
+    <div class="chips sr" id="chips" aria-label="Θέματα"></div>
     <div class="panel sr d1" id="panel" aria-live="polite"></div>
   </div>
 </section>
@@ -595,7 +596,7 @@ footer .bottom a{color:#fff;border-bottom:1px solid rgba(239,235,255,.3)}
       <blockquote><p data-en="It is the best gift I ever gave myself.">Είναι το καλύτερο δώρο που έκανα εγώ στον εαυτό μου.</p><cite data-en="Katerina · doctoranytime">Κατερίνα · doctoranytime</cite></blockquote>
       <blockquote><p data-en="Very kind and approachable. She helps me in every single session.">Πολύ ευγενική και προσιτή. Με βοηθάει κάθε συνεδρία μαζί της.</p><cite data-en="Andreana · doctoranytime">Ανδρεάνα · doctoranytime</cite></blockquote>
     </div>
-    <div class="dots" id="dots" aria-hidden="true"></div>
+    <div class="dots" id="dots"></div>
     <div class="score sr">
       <span class="stars" aria-hidden="true">★★★★★</span><b>9.9<span style="font-size:14px;font-family:var(--sans);font-weight:700">/10</span></b>
       <a href="https://www.doctoranytime.gr/d/Psychologos/koutsoudi-xristina" target="_blank" rel="noopener" data-en="Read all reviews on doctoranytime →">Διαβάστε όλες τις αξιολογήσεις στο doctoranytime →</a>
@@ -764,14 +765,14 @@ footer .bottom a{color:#fff;border-bottom:1px solid rgba(239,235,255,.3)}
   ];
   var chips=d.getElementById('chips'), panel=d.getElementById('panel'), cur='anx', lang='el';
   var L={el:{first:'Πώς θα ξεκινούσαμε',side:'Στις πρώτες συνεδρίες',cta:'Κλείστε την πρώτη συνεδρία',note:'Συνεδρίες 60 λεπτών · δια ζώσης ή online'},en:{first:'How we would begin',side:'In the first sessions',cta:'Book your first session',note:'60-minute sessions · in person or online'}};
-  function renderChips(){chips.innerHTML=F.map(function(f){return '<button class="chip" role="tab" data-k="'+f.k+'" aria-pressed="'+(f.k===cur)+'">'+f[lang].c+'</button>'}).join('');}
-  function renderPanel(){var f=F.filter(function(x){return x.k===cur})[0][lang];panel.innerHTML='<div class="in"><div class="q">'+f.q+'</div>'+f.p.map(function(p){return '<p>'+p+'</p>'}).join('')+'</div><div class="side in"><h4>'+L[lang].side+'</h4><ul>'+f.s.map(function(s){return '<li>'+s+'</li>'}).join('')+'</ul><a class="btn light" href="#contact">'+L[lang].cta+' <svg><use href="#arrow"/></svg></a><p style="margin:14px 0 0;font-size:13px;color:rgba(239,235,255,.6)">'+L[lang].note+'</p></div>';}
+  function renderChips(){chips.innerHTML=F.map(function(f){return '<button class="chip" data-k="'+f.k+'" aria-pressed="'+(f.k===cur)+'">'+f[lang].c+'</button>'}).join('');}
+  function renderPanel(){var f=F.filter(function(x){return x.k===cur})[0][lang];panel.innerHTML='<div class="in"><div class="q">'+f.q+'</div>'+f.p.map(function(p){return '<p>'+p+'</p>'}).join('')+'</div><div class="side in"><h4>'+L[lang].side+'</h4><ul>'+f.s.map(function(s){return '<li>'+s+'</li>'}).join('')+'</ul><a class="btn light" href="#contact">'+L[lang].cta+' <svg><use href="#arrow"/></svg></a><p style="margin:14px 0 0;font-size:13px;color:rgba(239,235,255,.78)">'+L[lang].note+'</p></div>';}
   chips.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;cur=b.dataset.k;renderChips();renderPanel();});
   renderChips();renderPanel();
 
   /* ---------- quotes ---------- */
   var qs=[].slice.call(d.querySelectorAll('#quote blockquote')), dots=d.getElementById('dots'), qi=0, qt;
-  dots.innerHTML=qs.map(function(_,i){return '<button data-i="'+i+'"'+(i===0?' class="on"':'')+' aria-label="'+(i+1)+'"></button>'}).join('');
+  dots.innerHTML=qs.map(function(_,i){return '<button data-i="'+i+'"'+(i===0?' class="on"':'')+' aria-label="Αξιολόγηση '+(i+1)+'"></button>'}).join('');
   function showQ(i){qi=i;qs.forEach(function(q,j){q.classList.toggle('on',j===i)});dots.querySelectorAll('button').forEach(function(b,j){b.classList.toggle('on',j===i)});}
   function auto(){clearInterval(qt);if(!reduce)qt=setInterval(function(){showQ((qi+1)%qs.length)},6500)}
   dots.addEventListener('click',function(e){var b=e.target.closest('button');if(b){showQ(+b.dataset.i);auto()}});
