@@ -236,7 +236,7 @@ section{padding:112px 0}
 .panel .q{font-family:var(--serif);font-size:clamp(28px,3vw,44px);line-height:1.15;margin-bottom:24px;color:#fff}
 .panel p{color:rgba(239,235,255,.82);font-size:17px;margin-bottom:18px;max-width:58ch}
 .panel .side{background:rgba(239,235,255,.06);border:1px solid rgba(239,235,255,.14);border-radius:22px;padding:28px}
-.panel .side h4{font-family:var(--serif);font-weight:300;font-size:22px;margin-bottom:12px;color:#fff}
+.panel .side h3{font-family:var(--serif);font-weight:300;font-size:22px;margin-bottom:12px;color:#fff}
 .panel .side ul{display:grid;gap:10px;font-size:15px;color:rgba(239,235,255,.82);margin-bottom:22px}
 .panel .side li{display:flex;gap:10px}.panel .side li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--accent-soft);margin-top:9px}
 .panel .in{animation:fadeup .45s var(--ease)}
@@ -769,7 +769,7 @@ footer .bottom a{color:#fff;border-bottom:1px solid rgba(239,235,255,.3)}
   var chips=d.getElementById('chips'), panel=d.getElementById('panel'), cur='anx', lang='el';
   var L={el:{first:'Πώς θα ξεκινούσαμε',side:'Στις πρώτες συνεδρίες',cta:'Κλείστε την πρώτη συνεδρία',note:'Συνεδρίες 60 λεπτών · δια ζώσης ή online'},en:{first:'How we would begin',side:'In the first sessions',cta:'Book your first session',note:'60-minute sessions · in person or online'}};
   function renderChips(){chips.innerHTML=F.map(function(f){return '<button class="chip" data-k="'+f.k+'" aria-pressed="'+(f.k===cur)+'">'+f[lang].c+'</button>'}).join('');}
-  function renderPanel(){var f=F.filter(function(x){return x.k===cur})[0][lang];panel.innerHTML='<div class="in"><div class="q">'+f.q+'</div>'+f.p.map(function(p){return '<p>'+p+'</p>'}).join('')+'</div><div class="side in"><h4>'+L[lang].side+'</h4><ul>'+f.s.map(function(s){return '<li>'+s+'</li>'}).join('')+'</ul><a class="btn light" href="#contact">'+L[lang].cta+' <svg><use href="#arrow"/></svg></a><p style="margin:14px 0 0;font-size:13px;color:rgba(239,235,255,.78)">'+L[lang].note+'</p></div>';}
+  function renderPanel(){var f=F.filter(function(x){return x.k===cur})[0][lang];panel.innerHTML='<div class="in"><div class="q">'+f.q+'</div>'+f.p.map(function(p){return '<p>'+p+'</p>'}).join('')+'</div><div class="side in"><h3>'+L[lang].side+'</h3><ul>'+f.s.map(function(s){return '<li>'+s+'</li>'}).join('')+'</ul><a class="btn light" href="#contact">'+L[lang].cta+' <svg><use href="#arrow"/></svg></a><p style="margin:14px 0 0;font-size:13px;color:rgba(239,235,255,.78)">'+L[lang].note+'</p></div>';}
   chips.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;cur=b.dataset.k;renderChips();renderPanel();});
   renderChips();renderPanel();
 
